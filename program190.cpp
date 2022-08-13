@@ -1,0 +1,50 @@
+#include<iostream>
+using namespace std;
+			// string A = string B
+bool strcmpX(char *src, char *dest)									
+{
+	 while((*src != '\0')&&(*dest != '\0'))
+	{
+        if(*src != *dest)
+		{
+			break;
+		}
+		src++;
+		dest++;
+    }
+	
+	 if(*src == '\0'&&*dest == '\0')
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+int main()
+{
+	char Arr[20];		
+	char Brr[20];
+	bool bRet;
+	
+	cout<<"Enter first string"<<endl;
+	cin.getline(Arr,20);
+	
+	cout<<"Enter secound string"<<endl;
+	cin.getline(Brr,20);
+	
+	bRet = strcmpX(Arr,Brr);
+	
+	if(bRet == true)
+	{
+		cout<<"string are equal"<<endl;
+	}
+	else
+	{
+		cout<<"string are not equal"<<endl;
+	}
+
+	return 0;
+}
